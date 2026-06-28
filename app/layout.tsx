@@ -27,7 +27,7 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Khawaja',
+    title: "Khawaja's Portfolio",
     description: 'Personal portfolio of Khawaja',
 };
 
