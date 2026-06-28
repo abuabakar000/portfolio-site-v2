@@ -41,7 +41,7 @@ const Banner = () => {
                 ref={containerRef}
             >
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
-                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-7xl sm:text-[96px] md:text-[110px] font-anton">
+                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-[12vw] sm:text-[96px] md:text-[110px] font-anton">
                         <span className="text-primary">FULL-STACK</span>
                         <br /> <span className="ml-4">DEVELOPER</span>
                     </h1>
@@ -73,7 +73,7 @@ const Banner = () => {
                     </div>
                 </div>
 
-                <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
+                <div className="md:absolute bottom-[10%] right-[4%] flex flex-wrap justify-center md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
                             3+

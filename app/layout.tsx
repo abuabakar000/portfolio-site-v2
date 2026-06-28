@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Anton, Roboto_Flex } from 'next/font/google';
 import { ReactLenis } from 'lenis/react';
 
@@ -29,6 +29,11 @@ const robotoFlex = Roboto_Flex({
 export const metadata: Metadata = {
     title: "Khawaja's Portfolio",
     description: 'Personal portfolio of Khawaja',
+};
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
 };
 
 export default function RootLayout({

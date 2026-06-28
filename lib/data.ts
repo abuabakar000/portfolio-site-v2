@@ -107,6 +107,7 @@ export const PROJECTS: IProject[] = [
         techStack: ['Next.js', 'REST APIs', 'Outscraper API', 'Tailwind CSS'],
         thumbnail: '/projects/outreach-os/outreachos-thumbnail.webp',
         longThumbnail: '/projects/outreach-os/outreachos-thumbnail.webp',
+        mobileThumbnail: '/projects/smallerthumb/outreachos-mobile.webp',
         images: [
             '/projects/outreach-os/pic1.webp',
             '/projects/outreach-os/pic2.webp',
@@ -148,12 +149,13 @@ export const PROJECTS: IProject[] = [
         techStack: ['Next.js', 'Tailwind CSS', 'Node.js'],
         thumbnail: '/projects/inex/inex-thumbnail.webp',
         longThumbnail: '/projects/inex/inex-thumbnail.webp',
-        images: [
-            '/projects/inex/pic1.jpg',
-            '/projects/inex/pic2.jpg',
-            '/projects/inex/pic3.jpg',
-            '/projects/inex/pic4.jpg',
+    images: [
+            '/projects/inex/1.webp',
+            '/projects/inex/2.webp',
+            '/projects/inex/3.webp',
+            '/projects/inex/4.webp',
         ],
+        mobileThumbnail: '/projects/smallerthumb/inex-mobile.webp',
         description: `
         Inex Labs is a modern, high-performance agency website built to showcase engineering services, portfolios, and cases. 
         It is designed with an emphasis on speed, clean layout, and pixel-perfect responsiveness. <br/><br/>
@@ -181,6 +183,7 @@ export const PROJECTS: IProject[] = [
         techStack: ['React', 'Tailwind CSS', 'Framer Motion'],
         thumbnail: '/projects/the-good-burger/pic1.webp',
         longThumbnail: '/projects/the-good-burger/pic1.webp',
+        mobileThumbnail: '/projects/smallerthumb/burger-mobile.webp',
         images: [
             '/projects/the-good-burger/pic2.webp',
             '/projects/the-good-burger/pic3.webp',
@@ -215,6 +218,7 @@ export const PROJECTS: IProject[] = [
         techStack: ['Next.js', 'REST APIs', 'AI Generation', 'Tailwind CSS'],
         thumbnail: '/projects/resume-ai/pic1.webp',
         longThumbnail: '/projects/resume-ai/pic1.webp',
+        mobileThumbnail: '/projects/smallerthumb/resumeai-mobile.webp',
         images: [
             '/projects/resume-ai/pic2.webp',
             '/projects/resume-ai/pic3.webp',
@@ -248,6 +252,7 @@ export const PROJECTS: IProject[] = [
         techStack: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
         thumbnail: '/projects/furry-site/thumb.webp',
         longThumbnail: '/projects/furry-site/thumb.webp',
+        mobileThumbnail: '/projects/smallerthumb/furry-site-mobile.webp',
         images: [
             '/projects/furry-site/1.webp',
             '/projects/furry-site/2.webp',
@@ -280,6 +285,7 @@ export const PROJECTS: IProject[] = [
         techStack: ['React', 'Tailwind CSS', 'Node.js', 'Socket.io'],
         thumbnail: '/projects/dev-collab/pic1.webp',
         longThumbnail: '/projects/dev-collab/pic1.webp',
+        mobileThumbnail: '/projects/smallerthumb/devcollab-mobile.webp',
         images: [
             '/projects/dev-collab/pic2.webp',
             '/projects/dev-collab/pic3.webp',

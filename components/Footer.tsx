@@ -12,7 +12,7 @@ const Footer = () => {
                 <p className="text-lg">Have a project in mind?</p>
                 <CopyEmail
                     email={GENERAL_INFO.email}
-                    className="text-3xl sm:text-4xl font-anton inline-block mt-5 mb-10 hover:underline"
+                    className="text-[6.5vw] sm:text-4xl font-anton inline-block mt-5 mb-10 hover:underline break-all"
                 />
 
                 <div className="flex justify-center gap-6 mb-8">
