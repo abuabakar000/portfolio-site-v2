@@ -9,14 +9,7 @@ const Navbar = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-            <div className="container mx-auto px-6 py-6 md:py-8 flex justify-between items-center">
-                {/* Minimal brand logo/initials */}
-                <Link
-                    href="/"
-                    className="pointer-events-auto text-2xl font-anton tracking-wider text-white hover:text-primary transition-colors"
-                >
-                    K.
-                </Link>
+            <div className="container mx-auto px-6 py-6 md:py-8 flex justify-end items-center">
 
                 {/* Social Icons */}
                 <div className="flex items-center gap-6 pointer-events-auto">

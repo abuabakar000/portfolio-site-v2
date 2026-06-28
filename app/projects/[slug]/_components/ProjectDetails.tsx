@@ -135,13 +135,6 @@ const ProjectDetails = ({ project }: Props) => {
                         <div className="max-w-[635px] space-y-7 pb-20 mx-auto">
                             <div className="fade-in-later">
                                 <p className="text-muted-foreground font-anton mb-3">
-                                    Year
-                                </p>
-
-                                <div className="text-lg">{project.year}</div>
-                            </div>
-                            <div className="fade-in-later">
-                                <p className="text-muted-foreground font-anton mb-3">
                                     Tech & Technique
                                 </p>
 
