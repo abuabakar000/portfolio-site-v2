@@ -29,10 +29,19 @@ const ProjectList = () => {
                 setSelectedProject(null);
                 return;
             }
+            if (!imageContainer.current) return;
+
+            // Initialize quickTo settings for optimized tracking of the dynamic project image
+            const yTo = gsap.quickTo(imageContainer.current, 'y', {
+                duration: 1,
+                ease: 'power2.out',
+            });
+            const opacityTo = gsap.quickTo(imageContainer.current, 'opacity', {
+                duration: 0.3,
+            });
 
             const handleMouseMove = contextSafe?.((e: MouseEvent) => {
-                if (!containerRef.current) return;
-                if (!imageContainer.current) return;
+                if (!containerRef.current || !imageContainer.current) return;
 
                 if (window.innerWidth < 768) {
                     setSelectedProject(null);
@@ -40,7 +49,7 @@ const ProjectList = () => {
                 }
 
                 const containerRect =
-                    containerRef.current?.getBoundingClientRect();
+                    containerRef.current.getBoundingClientRect();
                 const imageRect =
                     imageContainer.current.getBoundingClientRect();
                 const offsetTop = e.clientY - containerRect.y;
@@ -52,17 +61,12 @@ const ProjectList = () => {
                     containerRect.x > e.clientX ||
                     containerRect.right < e.clientX
                 ) {
-                    return gsap.to(imageContainer.current, {
-                        duration: 0.3,
-                        opacity: 0,
-                    });
+                    opacityTo(0);
+                    return;
                 }
 
-                gsap.to(imageContainer.current, {
-                    y: offsetTop - imageRect.height / 2,
-                    duration: 1,
-                    opacity: 1,
-                });
+                yTo(offsetTop - imageRect.height / 2);
+                opacityTo(1);
             }) as any;
 
             window.addEventListener('mousemove', handleMouseMove);

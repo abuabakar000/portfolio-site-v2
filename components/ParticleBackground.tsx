@@ -10,12 +10,14 @@ const ParticleBackground = () => {
 
     useGSAP(() => {
         particlesRef.current.forEach((particle) => {
+            if (!particle) return;
             gsap.set(particle, {
                 width: Math.random() * 3 + 1,
                 height: Math.random() * 3 + 1,
                 opacity: Math.random(),
                 left: Math.random() * window.innerWidth,
                 top: Math.random() * (window.innerHeight + 1),
+                force3D: true,
             });
 
             gsap.to(particle, {
@@ -24,19 +26,24 @@ const ParticleBackground = () => {
                 opacity: 0,
                 repeat: -1,
                 ease: 'none',
-                // yoyo: true,
             });
         });
     }, []);
 
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const particleCount = isMobile ? 30 : 80; // reduced slightly from 100 for better desktop performance too
+
     return (
         <div className="fixed inset-0 z-0 pointer-events-none">
-            {[...Array(100)].map((_, i) => (
+            {[...Array(particleCount)].map((_, i) => (
                 <div
                     key={i}
                     ref={(el) => {
-                        particlesRef.current.push(el!);
+                        if (el) {
+                            particlesRef.current[i] = el;
+                        }
                     }}
+                    style={{ willChange: 'transform' }}
                     className="absolute rounded-full bg-white"
                 />
             ))}

@@ -10,19 +10,25 @@ const CustomCursor = () => {
 
     useGSAP((context, contextSafe) => {
         if (window.innerWidth < 768) return;
+        if (!svgRef.current) return;
+
+        // Initialize optimized quickTo animators for mouse follow cursor coordinates
+        const xTo = gsap.quickTo(svgRef.current, 'x', {
+            duration: 0.25,
+            ease: 'power2.out',
+        });
+        const yTo = gsap.quickTo(svgRef.current, 'y', {
+            duration: 0.25,
+            ease: 'power2.out',
+        });
+        const opacityTo = gsap.quickTo(svgRef.current, 'opacity', {
+            duration: 0.2,
+        });
 
         const handleMouseMove = contextSafe?.((e: MouseEvent) => {
-            if (!svgRef.current) return;
-
-            const { clientX, clientY } = e;
-
-            gsap.to(svgRef.current, {
-                x: clientX,
-                y: clientY,
-                ease: 'power2.out',
-                duration: 0.25,
-                opacity: 1,
-            });
+            xTo(e.clientX);
+            yTo(e.clientY);
+            opacityTo(1);
         }) as any;
 
         window.addEventListener('mousemove', handleMouseMove);
