@@ -1,7 +1,6 @@
 'use client';
 import { SOCIAL_LINKS } from '@/lib/data';
 import { Github, Linkedin } from 'lucide-react';
-import Link from 'next/link';
 
 const Navbar = () => {
     const githubUrl = SOCIAL_LINKS.find((l) => l.name.toLowerCase() === 'github')?.url || '#';
