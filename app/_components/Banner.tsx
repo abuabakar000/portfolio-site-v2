@@ -41,11 +41,11 @@ const Banner = () => {
                 ref={containerRef}
             >
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
-                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl xs:text-7xl sm:text-[96px] md:text-[110px] font-anton">
+                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-7xl xs:text-8xl sm:text-[96px] md:text-[110px] font-anton">
                         <span className="text-primary">FULL-STACK</span>
                         <br /> <span className="ml-4">DEVELOPER</span>
                     </h1>
-                    <p className="banner-description slide-up-and-fade mt-6 text-sm xs:text-base md:text-lg text-muted-foreground">
+                    <p className="banner-description slide-up-and-fade mt-6 text-base xs:text-lg md:text-lg text-muted-foreground">
                         Hi! I&apos;m{' '}
                         <span className="font-medium text-foreground">
                             Khawaja
@@ -75,26 +75,28 @@ const Banner = () => {
 
                 <div className="w-full grid grid-cols-3 md:flex md:flex-col md:absolute bottom-[10%] right-[4%] gap-4 md:gap-8 text-center md:text-right mt-10 md:mt-0">
                     <div className="slide-up-and-fade">
-                        <h5 className="text-2xl xs:text-3xl md:text-4xl font-anton text-primary mb-1">
+                        <h5 className="text-3xl xs:text-4xl md:text-4xl font-anton text-primary mb-1">
                             3+
                         </h5>
-                        <p className="text-[10px] xs:text-xs md:text-base text-muted-foreground leading-tight">
-                            Years of Experience
+                        <p className="text-xs xs:text-sm md:text-base text-muted-foreground leading-tight">
+                            Years of <br className="md:hidden" /> Experience
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
-                        <h5 className="text-2xl xs:text-3xl md:text-4xl font-anton text-primary mb-1">
+                        <h5 className="text-3xl xs:text-4xl md:text-4xl font-anton text-primary mb-1">
                             20+
                         </h5>
-                        <p className="text-[10px] xs:text-xs md:text-base text-muted-foreground leading-tight">
-                            Completed Projects
+                        <p className="text-xs xs:text-sm md:text-base text-muted-foreground leading-tight">
+                            Completed <br className="md:hidden" /> Projects
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
-                        <h5 className="text-2xl xs:text-3xl md:text-4xl font-anton text-primary mb-1">
+                        <h5 className="text-3xl xs:text-4xl md:text-4xl font-anton text-primary mb-1">
                             10K+
                         </h5>
-                        <p className="text-[10px] xs:text-xs md:text-base text-muted-foreground leading-tight">Hours Worked</p>
+                        <p className="text-xs xs:text-sm md:text-base text-muted-foreground leading-tight">
+                            Hours <br className="md:hidden" /> Worked
+                        </p>
                     </div>
                 </div>
             </div>
