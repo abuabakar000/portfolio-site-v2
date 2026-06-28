@@ -240,6 +240,7 @@ export const PROJECTS: IProject[] = [
           <li>– Coded the real-time resume compiler and state sync.</li>
           <li>– Designed flexible, printing-optimized CV layouts.</li>
         </ul>
+        `,
     },
     {
         title: "Citrini's Den",
